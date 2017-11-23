@@ -105,13 +105,71 @@ isHosted: false
 
 def add_view(hash)
   hash[:response][:results].each do |element|
-
     element.merge!(views: 0)
-    # element << [:views => 0]
   end
 
 end
 
+
+def read_article(hash)
+  hash[:response][:results].sample[:views] += 1
+end
+
+def display_views(hash)
+  hash[:response][:results].each do |element|
+    puts "#{element[:webTitle]}: #{element[:views]}"
+  end
+end
+
+
 # puts media_hash[:response][:results]
 
-puts add_view(media_hash)
+add_view(media_hash)
+
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+read_article(media_hash)
+
+
+display_views(media_hash)
