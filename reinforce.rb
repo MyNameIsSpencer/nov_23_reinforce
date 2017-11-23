@@ -103,6 +103,15 @@ isHosted: false
 }
 
 
-def
+def add_view(hash)
+  hash[:response][:results].each do |element|
 
-puts media_hash[:response]
+    element.merge!(views: 0)
+    # element << [:views => 0]
+  end
+
+end
+
+# puts media_hash[:response][:results]
+
+puts add_view(media_hash)
